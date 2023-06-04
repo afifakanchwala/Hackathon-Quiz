@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKATHON QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="main">
+
+        <div class="container">
+            <div class="col">
+                <h3 id="questionBox">
+                    <div id="category">
+                        <h2>Select a Category:</h2>
+                        <button class="category-btn" onclick="startQuiz('music')">Music</button>
+                        <button class="category-btn" onclick="startQuiz('coding')">Coding</button>
+                        <button class="category-btn" onclick="startQuiz('modern-art')">Modern Art</button>
+                    </div>
+                    1. This is a Question
+                </h3>
+            </div>
+            <div class="box">
+                <input name="option" type="radio" id="first" value="options" required>
+                <label for="first">Answer 1</label>
+            </div>
+            <div class="box">
+                <input name="option" type="radio" id="second" value="options" required>
+                <label for="second">Answer 2</label>
+            </div>
+            <div class="box">
+                <input name="option" type="radio" id="third" value="options" required>
+                <label for="third">Answer 3</label>
+            </div>
+            <div class=" box">
+                <input name="option" type="radio" id="fourth" value="options" required>
+                <label for="fourth">Answer 4</label>
+            </div>
+            <div id="quiz" style="display: none;"></div>
+            <div id="result" style="display: none;">
+                <h2>Your Score:</h2>
+                <p id="score"></p>
+                <button onclick="restartQuiz()">Restart</button>
+            </div>
+
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
