@@ -1,218 +1,7 @@
-const quizData = {
-  //
-  //     {
-  //       question: "Which of the following is not a type of music notation?",
-  //       options: [
-  //         "Standard notation",
-  //         "Tab notation",
-  //         "Morse code notation",
-  //         "Graphics notation",
-  //       ],
-  //       answer: 3,
-  //     },
-  //     {
-  //       question: "What is the most common time signature in classical music?",
-  //       options: ["3/4", "4/4", "5/4", "6/8"],
-  //       answer: "4/4",
-  //     },
-  //     {
-  //       question:
-  //         "Which of the following is not a type of instrument in a symphony orchestra?",
-  //       options: ["Violin", "Piano", "Harp", "Theremin"],
-  //       answer: "Theremin",
-  //     },
-  //     {
-  //       question: "What is the most common key in pop music?",
-  //       options: ["C Major", "G Major", "D Major", "A Major"],
-  //       answer: "C Major",
-  //     },
-  //     {
-  //       question: "Which of the following is not a type of chord?",
-  //       options: ["Major", "Minor", "Diminished", "Flat"],
-  //       answer: "Flat",
-  //     },
-  //     {
-  //       question: "Which of the following is not a type of music genre?",
-  //       options: ["Jazz", "Blues", "Rock", "Applesauce"],
-  //       answer: "Applesauce",
-  //     },
-  //     {
-  //       question: "Which of the following is not a type of music theory?",
-  //       options: ["Harmony", "Counterpoint", "Form", "Cooking"],
-  //       answer: "Cooking",
-  //     },
-  //     {
-  //       question: "What is the most common tempo marking in classical music?",
-  //       options: ["Allegro", "Andante", "Adagio", "Moderato"],
-  //       answer: "Allegro",
-  //     },
-  //     {
-  //       question: "Which of the following is not a type of musical form?",
-  //       options: ["Sonata", "Symphony", "Concerto", "Spaghetti"],
-  //       answer: "Spaghetti",
-  //     },
-  //     {
-  //       question:
-  //         "Which of the following is not a type of music notation software?",
-  //       options: ["Sibelius", "Finale", "MuseScore", "Microsoft Word"],
-  //       answer: "Microsoft Word",
-  //     },
-  //   ],
-  //   "modern-art": [
-  //     {
-  //       question: "Which artist is known for coining the term 'Surrealism'?",
-  //       options: [
-  //         "Pablo Picasso",
-  //         "Salvador Dali",
-  //         "Vincent van Gogh",
-  //         "Henri Matisse",
-  //       ],
-  //       answer: "Salvador Dali",
-  //     },
-  //     {
-  //       question:
-  //         "Which movement is associated with the use of abstract forms and shapes in art?",
-  //       options: ["Impressionism", "Expressionism", "Futurism", "Cubism"],
-  //       answer: "Cubism",
-  //     },
-  //     {
-  //       question:
-  //         "Which artist is known for painting the work 'The Persistence of Memory'?",
-  //       options: [
-  //         "Pablo Picasso",
-  //         "Salvador Dali",
-  //         "Vincent van Gogh",
-  //         "Henri Matisse",
-  //       ],
-  //       answer: "Salvador Dali",
-  //     },
-  //     {
-  //       question: "Which artist is known for creating the painting 'The Scream'?",
-  //       options: [
-  //         "Vincent van Gogh",
-  //         "Salvador Dali",
-  //         "Edvard Munch",
-  //         "Claude Monet",
-  //       ],
-  //       answer: "Edvard Munch",
-  //     },
-  //     {
-  //       question:
-  //         "What movement was associated with the use of bold, bright colors and thick brushstrokes?",
-  //       options: ["Impressionism", "Expressionism", "Fauvism", "Cubism"],
-  //       answer: "Fauvism",
-  //     },
-  //     {
-  //       question:
-  //         "What movement was associated with the use of bright colors, simplified forms, and a focus on movement and speed",
-  //       options: [
-  //         "Impressionism",
-  //         "Futurism",
-  //         "Surrealism",
-  //         "Abstract Expressionism",
-  //       ],
-  //       answer: "Futurism",
-  //     },
-  //     {
-  //       question:
-  //         "Which artist is known for creating the painting 'Water Lilies'?",
-  //       options: ["Claude Monet", "Paul Cezanne", "Paul Gauguin", "Paul Klee"],
-  //       answer: "Claude Monet",
-  //     },
-  //     {
-  //       question:
-  //         "Which artist is known for creating the painting 'Les Demoiselles d'Avignon'?",
-  //       options: [
-  //         "Henri Matisse",
-  //         "Vincent van Gogh",
-  //         "Salvador Dali",
-  //         "Pablo Picasso",
-  //       ],
-  //       answer: "Pablo Picasso",
-  //     },
-  //     {
-  //       question: "Which artist is known for creating the painting 'Guernica'?",
-  //       options: [
-  //         "Claude Mone",
-  //         "Paul Cezanne",
-  //         "Pablo Picasso",
-  //         "Vincent van Gogh",
-  //       ],
-  //       answer: "Pablo Picasso",
-  //     },
-  //     {
-  //       question:
-  //         "Which artist is known for creating the sculpture 'The Thinker'?",
-  //       options: ["Auguste Rodin", "Alexander Calder", "Jean Arp", "Henry Moore"],
-  //       answer: "Auguste Rodin",
-  //     },
-  //   ],
-  //   coding: [
-  //     {
-  //       question: "What is the correct syntax for an if statement in Python?",
-  //       options: [
-  //         "if (condition):",
-  //         "if condition",
-  //         "if: condition",
-  //         "if condition:",
-  //       ],
-  //       answer: "if condition:",
-  //     },
-  //     {
-  //       question: "Which of the following is not a data type in JavaScript?",
-  //       options: ["String", "Number", "Boolean", "ArrayList"],
-  //       answer: "ArrayList",
-  //     },
-  //     {
-  //       question: "Which of the following is used to declare a variable in Java?",
-  //       options: ["var", "let", "const", "int"],
-  //       answer: "int",
-  //     },
-  //     {
-  //       question: "What is the correct syntax for a for loop in C#?",
-  //       options: [
-  //         "for i = 0 to 10",
-  //         "for (i = 0; i <= 10; i++)",
-  //         "for (int i = 0; i <= 10)",
-  //         "for i in range(0, 10)",
-  //       ],
-  //       answer: "for (i = 0; i <= 10; i++)",
-  //     },
-  //     {
-  //       question: "Which of the following is not a looping structure in PHP?",
-  //       options: ["while", "for", "do-while", "foreach"],
-  //       answer: "foreach",
-  //     },
-  //     {
-  //       question: "Which of the following is not a valid operator in C++?",
-  //       options: ["+", "-", "*", "$"],
-  //       answer: "$",
-  //     },
-  //     {
-  //       question:
-  //         "In which programming language is 'print' used for displaying output?",
-  //       options: ["Python", "JavaScript", "Java", "C++"],
-  //       answer: "Python",
-  //     },
-  //     {
-  //       question: "What is the correct syntax for a function in Ruby?",
-  //       options: ["function name()", "def name", "function name", "def name()"],
-  //       answer: "def name()",
-  //     },
-  //     {
-  //       question: "Which of the following is not a type of variable in Swift?",
-  //       options: ["Int", "String", "Double", "Object"],
-  //       answer: "Object",
-  //     },
-  //     {
-  //       question: "In which programming language is '#' used for commenting?",
-  //       options: ["Python", "JavaScript", "Java", "C++"],
-  //       answer: "C++",
-  //     },
-  //   ],
-
-  music: [
+const data = {
+  Music: [
     {
+      id: 1,
       question: "Which of the following is not a type of music notation?",
       options: [
         "Standard notation",
@@ -220,58 +9,78 @@ const quizData = {
         "Morse code notation",
         "Graphics notation",
       ],
-      answer: 2,
+      answer: "Morse code notation",
+      category: "music",
     },
     {
+      id: 2,
       question: "What is the most common time signature in classical music?",
       options: ["3/4", "4/4", "5/4", "6/8"],
-      answer: 1,
+      answer: "4/4",
+      category: "music",
     },
     {
+      id: 3,
       question:
         "Which of the following is not a type of instrument in a symphony orchestra?",
       options: ["Violin", "Piano", "Harp", "Theremin"],
-      answer: 3,
+      answer: "Theremin",
+      category: "music",
     },
     {
+      id: 4,
       question: "What is the most common key in pop music?",
       options: ["C Major", "G Major", "D Major", "A Major"],
-      answer: 0,
+      answer: "C Major",
+      category: "music",
     },
     {
+      id: 5,
       question: "Which of the following is not a type of chord?",
       options: ["Major", "Minor", "Diminished", "Flat"],
-      answer: 3,
+      answer: "Flat",
+      category: "music",
     },
     {
+      id: 6,
       question: "Which of the following is not a type of music genre?",
       options: ["Jazz", "Blues", "Rock", "Applesauce"],
-      answer: 3,
+      answer: "Applesauce",
+      category: "music",
     },
     {
+      id: 7,
       question: "Which of the following is not a type of music theory?",
       options: ["Harmony", "Counterpoint", "Form", "Cooking"],
-      answer: 3,
+      answer: "Cooking",
+      category: "music",
     },
     {
+      id: 8,
       question: "What is the most common tempo marking in classical music?",
       options: ["Allegro", "Andante", "Adagio", "Moderato"],
-      answer: 0,
+      answer: "Allegro",
+      category: "music",
     },
     {
+      id: 9,
       question: "Which of the following is not a type of musical form?",
       options: ["Sonata", "Symphony", "Concerto", "Spaghetti"],
-      answer: 3,
+      answer: "Spaghetti",
+      category: "music",
     },
     {
+      id: 10,
       question:
         "Which of the following is not a type of music notation software?",
       options: ["Sibelius", "Finale", "MuseScore", "Microsoft Word"],
-      answer: 3,
+      answer: "Microsoft Word",
+      category: "music",
     },
   ],
-  "modern-art": [
+  "Modern-Art": [
     {
+      id: 11,
       question: "Which artist is known for coining the term 'Surrealism'?",
       options: [
         "Pablo Picasso",
@@ -279,15 +88,19 @@ const quizData = {
         "Vincent van Gogh",
         "Henri Matisse",
       ],
-      answer: 1,
+      answer: "Salvador Dali",
+      category: "modern-art",
     },
     {
+      id: 12,
       question:
         "Which movement is associated with the use of abstract forms and shapes in art?",
       options: ["Impressionism", "Expressionism", "Futurism", "Cubism"],
-      answer: 3,
+      answer: "Cubism",
+      category: "modern-art",
     },
     {
+      id: 13,
       question:
         "Which artist is known for painting the work 'The Persistence of Memory'?",
       options: [
@@ -296,9 +109,11 @@ const quizData = {
         "Vincent van Gogh",
         "Henri Matisse",
       ],
-      answer: 1,
+      answer: "Salvador Dali",
+      category: "modern-art",
     },
     {
+      id: 14,
       question: "Which artist is known for creating the painting 'The Scream'?",
       options: [
         "Vincent van Gogh",
@@ -306,32 +121,40 @@ const quizData = {
         "Edvard Munch",
         "Claude Monet",
       ],
-      answer: 2,
+      answer: "Edvard Munch",
+      category: "modern-art",
     },
     {
+      id: 15,
       question:
         "What movement was associated with the use of bold, bright colors and thick brushstrokes?",
       options: ["Impressionism", "Expressionism", "Fauvism", "Cubism"],
-      answer: 2,
+      answer: "Fauvism",
+      category: "modern-art",
     },
     {
+      id: 16,
       question:
-        "What movement was associated with the use of bright colors, simplified forms, and a focus on movement and speed?",
+        "What movement was associated with the use of bright colors, simplified forms, and a focus on movement and speed",
       options: [
         "Impressionism",
         "Futurism",
         "Surrealism",
         "Abstract Expressionism",
       ],
-      answer: 1,
+      answer: "Futurism",
+      category: "modern-art",
     },
     {
+      id: 17,
       question:
         "Which artist is known for creating the painting 'Water Lilies'?",
       options: ["Claude Monet", "Paul Cezanne", "Paul Gauguin", "Paul Klee"],
-      answer: 0,
+      answer: "Claude Monet",
+      category: "modern-art",
     },
     {
+      id: 18,
       question:
         "Which artist is known for creating the painting 'Les Demoiselles d'Avignon'?",
       options: [
@@ -340,9 +163,11 @@ const quizData = {
         "Salvador Dali",
         "Pablo Picasso",
       ],
-      answer: 3,
+      answer: "Pablo Picasso",
+      category: "modern-art",
     },
     {
+      id: 19,
       question: "Which artist is known for creating the painting 'Guernica'?",
       options: [
         "Claude Mone",
@@ -350,17 +175,21 @@ const quizData = {
         "Pablo Picasso",
         "Vincent van Gogh",
       ],
-      answer: 2,
+      answer: "Pablo Picasso",
+      category: "modern-art",
     },
     {
+      id: 20,
       question:
         "Which artist is known for creating the sculpture 'The Thinker'?",
       options: ["Auguste Rodin", "Alexander Calder", "Jean Arp", "Henry Moore"],
-      answer: 0,
+      answer: "Auguste Rodin",
+      category: "modern-art",
     },
   ],
-  coding: [
+  Coding: [
     {
+      id: 21,
       question: "What is the correct syntax for an if statement in Python?",
       options: [
         "if (condition):",
@@ -368,19 +197,25 @@ const quizData = {
         "if: condition",
         "if condition:",
       ],
-      answer: 3,
+      answer: "if condition:",
+      category: "coding",
     },
     {
+      id: 22,
       question: "Which of the following is not a data type in JavaScript?",
       options: ["String", "Number", "Boolean", "ArrayList"],
-      answer: 3,
+      answer: "ArrayList",
+      category: "coding",
     },
     {
+      id: 23,
       question: "Which of the following is used to declare a variable in Java?",
       options: ["var", "let", "const", "int"],
-      answer: 3,
+      answer: "int",
+      category: "coding",
     },
     {
+      id: 24,
       question: "What is the correct syntax for a for loop in C#?",
       options: [
         "for i = 0 to 10",
@@ -388,151 +223,226 @@ const quizData = {
         "for (int i = 0; i <= 10)",
         "for i in range(0, 10)",
       ],
-      answer: 1,
+      answer: "for (i = 0; i <= 10; i++)",
+      category: "coding",
     },
     {
+      id: 25,
       question: "Which of the following is not a looping structure in PHP?",
       options: ["while", "for", "do-while", "foreach"],
-      answer: 3,
+      answer: "foreach",
+      category: "coding",
     },
     {
+      id: 26,
       question: "Which of the following is not a valid operator in C++?",
       options: ["+", "-", "*", "$"],
-      answer: 3,
+      answer: "$",
+      category: "coding",
     },
     {
+      id: 27,
       question:
         "In which programming language is 'print' used for displaying output?",
       options: ["Python", "JavaScript", "Java", "C++"],
-      answer: 0,
+      answer: "Python",
+      category: "coding",
     },
     {
+      id: 28,
       question: "What is the correct syntax for a function in Ruby?",
       options: ["function name()", "def name", "function name", "def name()"],
-      answer: 3,
+      answer: "def name()",
+      category: "coding",
     },
     {
+      id: 29,
       question: "Which of the following is not a type of variable in Swift?",
       options: ["Int", "String", "Double", "Object"],
-      answer: 3,
+      answer: "Object",
+      category: "coding",
     },
     {
+      id: 30,
       question: "In which programming language is '#' used for commenting?",
       options: ["Python", "JavaScript", "Java", "C++"],
-      answer: 3,
+      answer: "C++",
+      category: "coding",
     },
   ],
 };
 
-const categorySelect = document.getElementById("category-select");
-const startButton = document.getElementById("start-button");
-const quizContainer = document.getElementById("quiz");
-const questionNumber = document.getElementById("question-number");
-const questionElement = document.getElementById("question");
-const optionsList = document.getElementById("options");
+// Global variables
+let currentCategory = "";
+let currentQuestionIndex = 0;
+let selectedAnswers = {};
+
+// DOM elements
+const categoryButtonsContainer = document.getElementById("category-buttons");
+const quizContainer = document.getElementById("quiz-container");
+const categoryTitle = document.getElementById("category-title");
+const questionText = document.getElementById("question-text");
+const optionsContainer = document.getElementById("options-container");
+const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
-const returnButton = document.getElementById("return-button");
-const reportContainer = document.getElementById("report");
-const scoreElement = document.getElementById("score");
-const correctAnswersElement = document.getElementById("correct-answers");
-const incorrectAnswersElement = document.getElementById("incorrect-answers");
+const submitButton = document.getElementById("submit-button");
+const boxHeaderDiv = document.getElementById("box");
 
-let currentCategory;
-let currentQuestionIndex;
-let score;
-let selectedAnswers;
+// Render category buttons
+for (const category in data) {
+  const categoryButton = document.createElement("button");
+  categoryButton.classList.add("category-button");
+  categoryButton.innerText = category;
+  categoryButton.addEventListener("click", () => loadCategory(category));
+  if (localStorage.getItem(category) != null) {
+    categoryButton.style.backgroundColor = "grey";
+    categoryButton.disabled = true;
+  }
+  categoryButtonsContainer.appendChild(categoryButton);
+}
 
-startButton.addEventListener("click", startQuiz);
-nextButton.addEventListener("click", loadNextQuestion);
-returnButton.addEventListener("click", returnToMainPage);
-
-function startQuiz() {
-  const selectedCategory = categorySelect.value;
-  currentCategory = quizData[selectedCategory];
+// Load questions from selected category
+function loadCategory(category) {
+  currentCategory = category;
   currentQuestionIndex = 0;
-  score = 0;
-  selectedAnswers = [];
+  selectedAnswers = {};
 
-  categorySelect.disabled = true;
-  startButton.disabled = true;
+  renderQuestion();
+  updateNavigationButtons();
+  categoryButtonsContainer.style.display = "none";
   quizContainer.style.display = "block";
-  reportContainer.style.display = "none";
-
-  loadQuestion();
 }
 
-function loadQuestion() {
-  const currentQuestion = currentCategory[currentQuestionIndex];
-
-  questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
-  questionElement.innerText = currentQuestion.question;
-  optionsList.innerHTML = "";
-
-  for (let i = 0; i < currentQuestion.options.length; i++) {
-    const option = document.createElement("li");
-    option.innerText = currentQuestion.options[i];
-    option.addEventListener("click", selectOption);
-    optionsList.appendChild(option);
-  }
-
+// Render current question
+function renderQuestion() {
+  boxHeaderDiv.style.display = "none";
   nextButton.disabled = true;
+  const questions = data[currentCategory];
+  const currentQuestion = questions[currentQuestionIndex];
+  categoryTitle.innerText = currentCategory;
+  questionText.innerText =
+    currentQuestionIndex + 1 + ". " + currentQuestion.question;
+
+  optionsContainer.innerHTML = "";
+
+  currentQuestion.options.forEach((option) => {
+    const optionContainer = document.createElement("div");
+    optionContainer.classList.add("option-container");
+
+    const radioInput = document.createElement("input");
+    radioInput.type = "radio";
+    radioInput.name = "answer";
+    radioInput.value = option;
+
+    if (
+      currentCategory != undefined &&
+      option != undefined &&
+      localStorage.getItem(currentCategory + "_" + currentQuestion.id) !=
+        null &&
+      localStorage.getItem(currentCategory + "_" + currentQuestion.id) == option
+    ) {
+      radioInput.checked = "checked";
+    }
+    radioInput.id = option;
+    radioInput.addEventListener("change", () => {
+      selectedAnswers[currentQuestion.id] = option;
+      updateNavigationButtons();
+    });
+    const optionLabel = document.createElement("label");
+    optionLabel.innerText = option;
+    optionContainer.appendChild(radioInput);
+    optionContainer.appendChild(optionLabel);
+    optionsContainer.appendChild(optionContainer);
+  });
+  updateNavigationButtons();
 }
-
-function selectOption(event) {
-  const selectedOption = event.target;
-  const selectedOptionIndex = Array.from(optionsList.children).indexOf(
-    selectedOption
-  );
-
-  if (!selectedAnswers[currentQuestionIndex]) {
-    Array.from(optionsList.children).forEach((option) =>
-      option.classList.remove("selected")
+function updateNavigationButtons() {
+  const questions = data[currentCategory];
+  const currentQuestion = questions[currentQuestionIndex];
+  prevButton.disabled = currentQuestionIndex === 0;
+  nextButton.disabled = !selectedAnswers[currentQuestion.id];
+  if (
+    selectedAnswers[currentQuestion.id] != undefined &&
+    selectedAnswers[currentQuestion.id] != null
+  ) {
+    localStorage.setItem(
+      currentCategory + "_" + currentQuestion.id,
+      selectedAnswers[currentQuestion.id]
     );
-
-    selectedOption.classList.add("selected");
+  }
+  if (currentQuestionIndex === questions.length - 1) {
+    nextButton.style.visibility = "hidden";
+    submitButton.style.display = "inline-block";
+  } else {
+    nextButton.style.visibility = "visible";
+    submitButton.style.display = "none";
+  }
+  if (
+    localStorage.getItem(currentCategory + "_" + currentQuestion.id) != null
+  ) {
     nextButton.disabled = false;
-    selectedAnswers[currentQuestionIndex] = selectedOptionIndex;
+  }
+}
+// Function to handle the next button click
+function handleNext() {
+  if (currentQuestionIndex < data[currentCategory].length - 1) {
+    currentQuestionIndex++;
+    renderQuestion();
   }
 }
 
-function loadNextQuestion() {
-  const selectedOptionIndex = selectedAnswers[currentQuestionIndex];
+// Function to handle the previous button click
+function handlePrevious() {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    renderQuestion();
+  }
+}
 
-  if (selectedOptionIndex !== undefined) {
-    const currentQuestion = currentCategory[currentQuestionIndex];
-    const correctAnswerIndex = currentQuestion.answer;
-
-    if (selectedOptionIndex === correctAnswerIndex) {
+// Function to handle the submit button click
+function handleSubmit() {
+  // Calculate the marks or score
+  let score = 0;
+  const questions = data[currentCategory];
+  for (let i = 0; i < questions.length; i++) {
+    const question = questions[i];
+    console.log("selected : ", selectedAnswers[question.id]);
+    console.log("correct : ", question.answer);
+    if (selectedAnswers[question.id] === question.answer) {
       score++;
     }
-
-    currentQuestionIndex++;
-
-    if (currentQuestionIndex < currentCategory.length) {
-      loadQuestion();
-    } else {
-      showQuizReport();
-    }
   }
+
+  // Display the score
+
+  const scoreContainer = document.getElementById("popup-text");
+  scoreContainer.textContent = `Your Score: ${score}/${questions.length}`;
+  scoreContainer.style.display = "block";
+
+  // Disable the next and previous buttons
+  nextButton.disabled = true;
+  prevButton.disabled = true;
+  // submitButton.style.display = "none";
+  console.log(currentCategory);
+  console.log(selectedAnswers);
+  localStorage.setItem(currentCategory, true);
+  openPopup();
 }
 
-function showQuizReport() {
-  quizContainer.style.display = "none";
-  reportContainer.style.display = "block";
-
-  scoreElement.innerText = `Score: ${score}/${currentCategory.length}`;
-  correctAnswersElement.innerText = `Correct Answers: ${score}`;
-  incorrectAnswersElement.innerText = `Incorrect Answers: ${
-    currentCategory.length - score
-  }`;
-
-  categorySelect.disabled = false;
-  startButton.disabled = false;
+function openPopup() {
+  var popupContainer = document.getElementById("popupContainer");
+  document.body.classList.add("popup-active");
+  popupContainer.style.display = "block";
 }
 
-function returnToMainPage() {
-  quizContainer.style.display = "none";
-  reportContainer.style.display = "none";
-  categorySelect.disabled = false;
-  startButton.disabled = false;
+// Close the pop-up
+function closePopup() {
+  var popupContainer = document.getElementById("popupContainer");
+  document.body.classList.remove("popup-active");
+  popupContainer.style.display = "none";
 }
+
+// Add event listeners to the buttons
+nextButton.addEventListener("click", handleNext);
+prevButton.addEventListener("click", handlePrevious);
+submitButton.addEventListener("click", handleSubmit);

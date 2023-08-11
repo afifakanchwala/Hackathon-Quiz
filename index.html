@@ -1,36 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Quiz Pop</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+<html lang="en">
+<head>
+    <title>Quiz App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-  <body>
-    <div id="container">
-      <h1>Quiz Pop</h1>
-      <div id="topic-selection">
-        <h2>Select a topic:</h2>
-        <select id="category-select">
-          <option value="music">Music</option>
-          <option value="modern-art">Modern Art</option>
-          <option value="coding">Coding</option>
-        </select>
-        <button id="start-button">Start Quiz</button>
+<body>
+    <div  class="container">
+        <div id="box" class="box">
+            <div class="inner">
+              <span>Quiz Pop</span>
+            </div>
+            <div class="inner">
+              <span>Quiz Pop</span>
+            </div>
+          </div>
+    <div id="category-buttons" class="category-buttons">
+    </div>
+    <div id="quiz-container" class="quiz-container">
+      <h2 id="category-title" class="category-title"></h2>
+      <p id="question-text" class="question-text"></p>
+      <div id="options-container" class="options-container">
       </div>
-      <div id="quiz">
-        <h2 id="question-number"></h2>
-        <h3 id="question"></h3>
-        <ul id="options"></ul>
+      <div class="navigation-buttons">
+        <button id="prev-button">Previous</button>
         <button id="next-button">Next</button>
-        <button id="return-button">Return</button>
-      </div>
-      <div id="report">
-        <h2>Quiz Report</h2>
-        <p id="score"></p>
-        <p id="correct-answers"></p>
-        <p id="incorrect-answers"></p>
-        <footer>Developed by Team Catalyst &#x1F680;</footer>
+        <button id="submit-button" class="submit-button">Submit</button>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <div style="text-align:center" id="score-container"></div>
+  <!-- Pop-up container -->
+  <div class="popup-container" id="popupContainer">
+    <!-- Pop-up content -->
+    <div class="popup-content">
+        <!-- Close button -->
+        <span class="popup-close" onclick="window.location.reload()">&times;</span>
+        <!-- Pop-up text -->
+        <p id="popup-text" class="popup-text"></p>
+        <!-- Pop-up action button -->
+        <button class="popup-action" onclick="window.location.reload()">Close</button>
+        
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
 </html>
